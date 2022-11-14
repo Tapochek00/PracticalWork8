@@ -10,10 +10,10 @@ namespace PracticalWork8
     {
         int Next { get; }
 
-        int Value { get; }
+        int GetNext();
 
-        object GetNext();
+        void Reset();
 
-        void SetStart(int start);
+        void SetStart(int x);
     }
 }

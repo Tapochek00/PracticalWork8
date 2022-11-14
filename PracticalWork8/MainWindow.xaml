@@ -45,7 +45,7 @@
                 HorizontalAlignment="Center" Margin="0, 0, 200, 0"
                 VerticalAlignment="Center" BorderBrush="White"
                 Background="#FF00BD62" Foreground="White"
-                Content="+1" Click="btn_Next_Click"></Button>
+                Content="Дальше" Click="btn_Next_Click"></Button>
 
         <Button x:Name="btn_Add" Width="100" Height="25"
                 HorizontalAlignment="Center"

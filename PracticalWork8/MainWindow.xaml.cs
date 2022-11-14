@@ -44,7 +44,7 @@ namespace PracticalWork8
         {
             try
             {
-                if (startValue.Text != null)
+                if (startValue.Text != "")
                 {
                     int.TryParse(startValue.Text, out int start);
                     PrimeNumbers newNumber = new PrimeNumbers(start);
@@ -80,7 +80,7 @@ namespace PracticalWork8
                     }
                     else
                     {
-                        primeNumbers[list.SelectedIndex].SetStart();
+                        primeNumbers[list.SelectedIndex].Reset();
                         currentValues[list.SelectedIndex] = Convert.ToString(primeNumbers[list.SelectedIndex].Value);
                     }
                 }
@@ -129,7 +129,8 @@ namespace PracticalWork8
 
         private void btn_Clear_Click(object sender, RoutedEventArgs e)
         {
-            list.Items.Clear();
+            currentValues.Clear();
+            primeNumbers.Clear();
         }
 
         private void exit_Click(object sender, RoutedEventArgs e)

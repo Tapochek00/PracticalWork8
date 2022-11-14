@@ -13,7 +13,7 @@ namespace PracticalWork8
 
         public int Next
         {
-            get { return value++; }
+            get { return GetNext(); }
         }
 
         public int Value
@@ -28,7 +28,7 @@ namespace PracticalWork8
 
         public PrimeNumbers()
         {
-            start = 0;
+            start = 2;
             value = start;
         }
 
@@ -39,13 +39,37 @@ namespace PracticalWork8
         }
 
 
-        public object GetNext()
+        public int GetNext()
         {
-            value++;
-            return this;
+            bool isPrime = false;
+
+            while (!isPrime)
+            {
+                value++;
+                if (value < 6 && value != 4 && value != 1)
+                {
+                    isPrime = true;
+                }
+                else
+                {
+                    for (int i = 2; i < (int)(value / 2); i++)
+                    {
+                        if (value % i == 0)
+                        {
+                            isPrime = false;
+                            break;
+                        }
+                        else
+                        {
+                            isPrime = true;
+                        }
+                    }
+                }
+            }
+            return value;
         }
 
-        public void SetStart()
+        public void Reset()
         {
             value = start;
         }
